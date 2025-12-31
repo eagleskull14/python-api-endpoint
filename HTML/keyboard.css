@@ -1,0 +1,347 @@
+* {
+    user-select: none;
+}
+
+/* Desktop and large screens */
+@media (min-width: 768px) {
+    body,
+    html {
+        font-family: Arial, sans-serif;
+        background-color: #333333;
+        color: #f0f0f0;
+        overflow: hidden;
+    }
+
+    #keyboardholder {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    #keyboard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .row {
+        display: flex;
+        margin: 5px 0;
+    }
+
+    .key {
+        width: 40px;
+        height: 40px;
+        margin: 2px;
+        background-color: #444;
+        border: 1px solid #555;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        color: #fff;
+        transition: background-color 0.3s;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    .key:hover {
+        background-color: #555;
+    }
+
+    .space-key {
+        width: 200px;
+    }
+
+    .enter-key {
+        width: 75px;
+    }
+
+    .tab-key {
+        width: 60px;
+    }
+
+    .backspace-key {
+        width: 80px;
+    }
+
+    .arrow-key {
+        width: 40px;
+    }
+
+    .caps-key {
+        width: 70px;
+    }
+
+    .shift-key {
+        width: 100px;
+    }
+
+    .ctrl-key {
+        width: 60px;
+    }
+
+    .alt-key {
+        width: 50px;
+    }
+
+    .backslash-key {
+        width: 60px;
+    }
+
+    .function-key {
+        width: 66px;
+    }
+
+    #settings,
+    #reset {
+        position: fixed;
+        user-select: none;
+    }
+
+    #settings {
+        right: 0px;
+    }
+
+    #reset {
+        bottom: 0px;
+        right: 0px;
+    }
+
+    #settingdialog {
+        border: 1px solid #555;
+        border-radius: 8px;
+        background-color: #444;
+        padding: 20px;
+        max-width: 400px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    #settingdialog form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #settingdialog label {
+        color: #f0f0f0;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    #settingdialog input {
+        padding: 10px;
+        background-color: #333;
+        border: 1px solid #555;
+        border-radius: 4px;
+        color: #f0f0f0;
+        font-size: 14px;
+    }
+
+    #settingdialog input:focus {
+        outline: none;
+        border-color: #777;
+        background-color: #3a3a3a;
+    }
+
+    #settingdialog button {
+        padding: 10px 15px;
+        background-color: #555;
+        border: 1px solid #666;
+        border-radius: 4px;
+        color: #f0f0f0;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s;
+    }
+
+    #settingdialog button:hover {
+        background-color: #666;
+    }
+
+    #settingdialog form > div:last-child {
+        display: flex;
+        gap: 10px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 767px) {
+    body,
+    html {
+        font-family: Arial, sans-serif;
+        background-color: #333333;
+        color: #f0f0f0;
+        overflow: auto; /* Allow scrolling on mobile */
+    }
+
+    #keyboardholder {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    #keyboard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .row {
+        display: flex;
+        margin: 4px 0;
+        justify-content: center;
+    }
+
+    .key {
+        width: 25px;
+        height: 25px;
+        margin: 1.5px;
+        background-color: #444;
+        border: 1px solid #555;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        color: #fff;
+        transition: background-color 0.3s;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    .key:hover {
+        background-color: #555;
+    }
+
+    .key:active {
+        background-color: #666; /* Use active for touch devices */
+    }
+
+    .space-key {
+        width: 125px;
+    }
+
+    .enter-key {
+        width: 45px;
+    }
+
+    .tab-key {
+        width: 35px;
+    }
+
+    .backspace-key {
+        width: 50px;
+    }
+
+    .arrow-key {
+        width: 25px;
+    }
+
+    .caps-key {
+        width: 45px;
+    }
+
+    .shift-key {
+        width: 60px;
+    }
+
+    .ctrl-key {
+        width: 35px;
+    }
+
+    .alt-key {
+        width: 30px;
+    }
+
+    .backslash-key {
+        width: 35px;
+    }
+
+    .function-key {
+        width: 33px;
+    }
+
+    #settings,
+    #reset {
+        position: fixed;
+        user-select: none;
+    }
+
+    #settings {
+        top: 10px;
+        right: 10px;
+    }
+
+    #reset {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    #settingdialog {
+        border: 1px solid #555;
+        border-radius: 8px;
+        background-color: #444;
+        padding: 20px;
+        max-width: 90vw;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    #settingdialog form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #settingdialog label {
+        color: #f0f0f0;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    #settingdialog input {
+        padding: 12px;
+        background-color: #333;
+        border: 1px solid #555;
+        border-radius: 4px;
+        color: #f0f0f0;
+        font-size: 16px;
+    }
+
+    #settingdialog input:focus {
+        outline: none;
+        border-color: #777;
+        background-color: #3a3a3a;
+    }
+
+    #settingdialog button {
+        padding: 12px 16px;
+        background-color: #555;
+        border: 1px solid #666;
+        border-radius: 4px;
+        color: #f0f0f0;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    }
+
+    #settingdialog button:hover {
+        background-color: #666;
+    }
+
+    #settingdialog button:active {
+        background-color: #777;
+    }
+
+    #settingdialog form > div:last-child {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}
